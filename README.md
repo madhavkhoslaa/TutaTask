@@ -27,7 +27,7 @@ export interface IStep {
 ```
 
 each step is separated from other step and steps are chained together to make a validation rule chain like this.
-
+![diagram](https://i.imgur.com/H9DtFWL.png)
 ```
 import { cacheCheck } from "../ValidateFramework/Steps/CacheCheck/step";
 import { CacheUpdate } from "../ValidateFramework/Steps/CacheUpdate/step";
