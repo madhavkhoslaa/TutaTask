@@ -10,10 +10,11 @@ const validate = (data) => {
 exports.validate = validate;
 function handleInput() {
     const textBox = document.getElementById("textBox");
-    if (textBox !== null) {
+    const resultDisplay = document.getElementById("validationResult");
+    if (textBox !== null && resultDisplay !== null) {
         const textBoxValue = textBox.value;
         const result = (0, exports.validate)(textBoxValue);
-        console.log("Validation result: ", result);
+        resultDisplay.textContent = "Validation result: " + result; // Update the content of the result display
     }
 }
 exports.handleInput = handleInput;

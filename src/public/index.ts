@@ -8,10 +8,12 @@ export const validate = (data: string) => {
 
 export function handleInput() {
     const textBox = document.getElementById("textBox") as HTMLInputElement | null;
-    if (textBox !== null) {
+    const resultDisplay = document.getElementById("validationResult") as HTMLDivElement | null;
+
+    if (textBox !== null && resultDisplay !== null) {
         const textBoxValue = textBox.value;
         const result = validate(textBoxValue);
-        console.log("Validation result: ", result);
+        resultDisplay.textContent = "Validation result: " + result; // Update the content of the result display
     }
 }
 
