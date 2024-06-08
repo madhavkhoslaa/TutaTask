@@ -44,7 +44,7 @@ export class BasicFlow {
   }
 }
 ```
-
+![Design.]([https://content.codecademy.com/courses/learn-cpp/community-challenge/highfive.gif](https://imgur.com/a/jBM7Wvt)
 here we first do a cache check, then a local on browser validation, in the end we do a server validation and cache it. 
 
 This approach for having rules is extensible and new rules can be added , removed and order change easily.
