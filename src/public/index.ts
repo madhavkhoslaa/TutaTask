@@ -14,3 +14,10 @@ export function handleInput() {
         console.log("Validation result: ", result);
     }
 }
+
+document.addEventListener("DOMContentLoaded", () => {
+    const textBox = document.getElementById("textBox") as HTMLInputElement | null;
+    if (textBox !== null) {
+        textBox.addEventListener("input", handleInput); // Add event listener for input event
+    }
+});

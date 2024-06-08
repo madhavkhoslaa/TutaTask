@@ -7,14 +7,17 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node build/app.js",
     "build": "npx tsc && cp -r src/public build/",
-    "rb": "rm -rf ./build && npm run build && npm run start"
+    "rb": "rm -rf ./build && npm run build && npx webpack && npm run start"
   },
   "author": "",
   "license": "ISC",
   "description": "",
   "devDependencies": {
     "@types/node": "^20.14.2",
-    "typescript": "^5.4.5"
+    "ts-loader": "^9.5.1",
+    "typescript": "^5.4.5",
+    "webpack": "^5.91.0",
+    "webpack-cli": "^5.1.4"
   },
   "dependencies": {
     "@types/cors": "^2.8.17",
