@@ -2,17 +2,25 @@
   "name": "tutanota",
   "version": "1.0.0",
   "main": "index.js",
+  "type": "commonjs",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node build/app.js",
+    "build": "npx tsc && cp -r src/public build/",
+    "rb": "rm -rf ./build && npm run build && npm run start"
   },
   "author": "",
   "license": "ISC",
   "description": "",
   "devDependencies": {
+    "@types/node": "^20.14.2",
     "typescript": "^5.4.5"
   },
   "dependencies": {
-    "ts-node": "^10.9.2",
-    "tslog": "^4.9.2"
+    "@types/cors": "^2.8.17",
+    "@types/express": "^4.17.21",
+    "cors": "^2.8.5",
+    "express": "^4.19.2",
+    "ts-node": "^10.9.2"
   }
 }
