@@ -48,8 +48,11 @@ export class BasicFlow {
 here we first do a cache check, then a local on browser validation, in the end we do a server validation and cache it. 
 
 This approach for having rules is extensible and new rules can be added , removed and order change easily.
+
 `src/ValidateFramework/Steps` are the concrete class definations for each validation step
-`src/ValidationFlowBuilder` is the construction + instantiation of out steps
+
+`src/ValidationFlowBuilder` is the construction + instantiation of out steps(This instantiates the chain of rules in the order we want to implement)
+
 `The validation chain returns a list of step validations`
 
 ## services in the codebase
